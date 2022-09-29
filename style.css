@@ -60,13 +60,14 @@ body {
 
 .form-control {
 	position: relative;
-	margin: 2rem 0 4rem;
+	margin-bottom: 5.2rem;
 	width: 300px;
 }
 
 .form-control label {
 	position: absolute;
-	top: -1.2rem;
+	top: 0;
+	left: 0;
 	opacity: 0.8;
 }
 
@@ -74,14 +75,27 @@ body {
 	background-color: transparent;
 	border: 0;
 	border-bottom: 2px solid #fbfbef;
-	padding: 0.4rem 0.8rem;
+	padding: 0.8rem 0.2rem;
 	display: block;
 	width: 100%;
 	color: #fbfbef;
-	margin-bottom: 2px;
 }
 
 .form-control input:focus,
 .form-control input:valid {
-	outline: 1px solid #fbfbef;
+	outline: 1px solid #83bfec;
+	border-bottom-color: #83bfec;
+}
+
+.form-control label span {
+	display: inline-block;
+	font-size: 1.8rem;
+	min-width: 5px;
+	transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+	color: #83bfec;
+	transform: translateY(-30px);
 }
